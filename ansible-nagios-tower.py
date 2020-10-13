@@ -100,6 +100,8 @@ while Running:
         ansible_execute()
     elif readme == "2":
         server_list_2()
+	ansible_pass_2()
+	ansible_execute_2()
     elif readme == "exit":
         break
 
