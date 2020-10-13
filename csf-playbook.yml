@@ -1,0 +1,10 @@
+---
+- name: Transfer and execute a script.
+  hosts: webserver
+  user: root
+  tasks:
+     - name: Transfer the script
+       copy: src=/root/csf_install.sh dest=/root/csf_install.sh mode=0777
+
+     - name: Execute the script
+       command: sh /root/csf_install.sh

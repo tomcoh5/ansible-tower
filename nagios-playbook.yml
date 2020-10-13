@@ -1,0 +1,11 @@
+---
+- name: Transfer and execute a script.
+  hosts: webserver
+  user: root
+  tasks:
+     - name: Transfer the script
+       copy: src=/root/nagios_install.sh dest=/root/nagios_install.sh mode=0777
+
+     - name: Execute the script
+       command: sh /root/nagios_install.sh
+
